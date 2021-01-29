@@ -5,7 +5,7 @@ from django.conf import settings
 
 
 class User(AbstractUser):
-    username = models.CharField(blank=True, null=True)
+    username = None
     email = models.EmailField(_('email address'), unique=True)
 
     USERNAME_FIELD = 'email'
